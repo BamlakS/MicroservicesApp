@@ -1,0 +1,14 @@
+version: '3.4'
+services:
+  productservice:
+    image: productservice
+    build:
+      context: ./ProductService
+    ports:
+      - "5001:5000"
+  orderservice:
+    image: orderservice
+    build:
+      context: ./OrderService
+    ports:
+      - "5002:5000"
